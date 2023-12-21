@@ -3,9 +3,6 @@ import './App.css'
 import PokemonCard from './components/PokemonCard';
 import NavBar from './components/NavBar';
 
-
-
-
 const pokemonList = [
   {
       name: "bulbasaur",
@@ -35,15 +32,6 @@ const pokemonList = [
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
-  const nexthandleClick = () => {
-    setPokemonIndex(pokemonIndex + 1)
-  }
-
-  const previoushandleClick = () => {
-    setPokemonIndex(pokemonIndex - 1)
-  }
-
-
   return (
 
    <div>
@@ -51,11 +39,9 @@ function App() {
       
       <NavBar
       pokemonIndex={pokemonIndex}
-      nexthandleClick={nexthandleClick}
-      previoushandleClick={previoushandleClick}
       pokemonList={pokemonList}
+      setPokemonIndex={setPokemonIndex}     
 />
-
 
     </div>
   
